@@ -141,7 +141,7 @@
 		var address = getParam("address");
 		$(document).ready(function() {
 			uid = getLocal("pigUID")
-			phone = getLocal("pigphone")
+//			phone = getLocal("pigphone")
 			setItem("pigphone", phone)
 			setItem("pigUID", uid)
 			setItem("pigphone", phone)
@@ -207,7 +207,7 @@
 
 			is_back = false;
 			req(PIG_BUY, {
-//					'uid':uid,
+					'uid':uid,
 					'name': name,
 					'phone': phone,
 					'weixin': weixin,
