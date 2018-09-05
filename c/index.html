@@ -582,10 +582,39 @@
 				})
 
 		});
-		function goi(x){
-//			var  intElemScrollTop = someElement.scrollTop;
-			$(this).scrollTop(x);
-//			element.scrollTop = 1740;
+		var x = 0
+		var scrollTops = $(this).scrollTop();
+		var gun, gun1
+
+		function goi(m) {
+			x = m
+			clearInterval(gun)
+			clearInterval(gun1)
+			scrollTops = $(this).scrollTop();
+			if(scrollTops < x) {
+				var gun = setInterval(function() {
+					if(scrollTops >= x + 11) {
+						clearInterval(gun)
+						return;
+					}
+					scrollTops = scrollTops + 10
+					$(this).scrollTop(scrollTops);
+
+				}, 1)
+
+			} else if(scrollTops > x) {
+				var gun1 = setInterval(function() {
+					if(scrollTops <= x + 11) {
+						clearInterval(gun1)
+						return;
+					}
+					scrollTops = scrollTops - 10
+					$(this).scrollTop(scrollTops);
+
+				}, 1)
+
+			}
+
 		}
 
 		function gozc() {
