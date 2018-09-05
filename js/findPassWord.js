@@ -206,7 +206,7 @@ function maidian() {
 
 			req(BURIED_POINT_RECORD, {
 				'uid': uid,
-				'name': "pig_findpassword"
+				'name': "sale_findpassword"
 			}, function(data) {
 				changePic()
 			}, function(err) {
