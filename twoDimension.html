@@ -104,11 +104,11 @@
 			</div>
 			<!--<img style="width: 8.08rem;height: 3.47rem;margin-top: 0.39rem;margin-left: 0.95rem;" src="images/yq1.png" />-->
 
-			<img style="width: 3.5rem;height: 3.47rem;margin-left: 3.26rem;margin-top: 0.6rem;" id="twoDimension" src="http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/index.html" />
+			<img style="width: 3.5rem;height: 3.47rem;margin-left: 3.26rem;margin-top: 0.6rem;" id="twoDimension" src="" />
 			<div style="text-align: center;font-size: 0.34rem;color: rgb(0,0,0);margin-top: 0.16rem;font-weight: bold;">
 				立刻邀請好友一起賺IPG
 			</div>
-			<div style="margin-top: 0.1rem;color: rgb(0,0,0);font-size: 0.34rem;text-align: center;font-weight: bold;">邀請碼：<span style="font-size: 0.34rem;" id="code"></span>&nbsp;<span data-clipboard-text="http://gopig.io/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
+			<div style="margin-top: 0.1rem;color: rgb(0,0,0);font-size: 0.34rem;text-align: center;font-weight: bold;">邀請碼：<span style="font-size: 0.34rem;" id="code"></span>&nbsp;<span data-clipboard-text="http://ipg.sale/zhuce.html" class="glyphicon glyphicon-book btn1"></span></div>
 			<div style="margin-top: 0.1rem;text-align:center;color: rgb(0,0,0);font-size: 0.34rem;font-weight: bold;">邀請所得：<span id="coint" style="color: rgb(93,166,21);font-size: 0.34rem;">0</span>個IPG</div>
 
 			<div id="copy" style="background-color: rgb(255, 255, 255);margin-top: 1%;height: 1rem;line-height: 1.4rem;" class="copy">
@@ -169,10 +169,10 @@
 					success: function(obj) {
 						if(obj.err == "NOT ACCOUNT ERR") {} else {
 							var data = obj.data;
-							var urlss = "http://bshare.optimix.asia/barCode?site=weixin&url=http://gopig.io/zhuce2.html?info_id=" + data.code;
+							var urlss = "http://bshare.optimix.asia/barCode?site=weixin&url=http://ipg.sale/zhuce2.html?info_id=" + data.code;
 							$("#twoDimension").attr("src", urlss)
 							$("#code").text(data.code)
-							var urls = "http://gopig.io/zhuce2.html?info_id=" + data.code
+							var urls = "http://ipg.sale/zhuce2.html?info_id=" + data.code
 							$(".btn1").attr("data-clipboard-text", urls);
 							code = data.code
 							maidian()
@@ -180,7 +180,7 @@
 								title: '復仇的小豬',
 								desc: '你玩過憤怒的小鳥嗎？來注册領100鳥幣贏ETH！',
 								// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
-								link: 'http://gopig.io/zhuce.html?info_id=' + data.code,
+								link: 'http://ipg.sale/zhuce.html?info_id=' + data.code,
 								icon: '',
 								// 不要过于依赖以下两个回调，很多浏览器是不支持的
 								success: function() {
@@ -207,7 +207,7 @@
 			title: '復仇的小豬',
 			desc: '你玩過憤怒的小鳥嗎？來注册領100鳥幣贏ETH！',
 			// 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
-			link: 'http://gopig.io/zhuce2.html?info_id=' + code,
+			link: 'http://ipg.sale/zhuce2.html?info_id=' + code,
 			icon: '',
 			// 不要过于依赖以下两个回调，很多浏览器是不支持的
 			success: function() {
@@ -237,7 +237,7 @@
 		});
 
 		clipboard.on('error', function(e) {
-			var copy_body = "http://gopig.io/zhuce2.html?info_id=" + code
+			var copy_body = "http://ipg.sale/zhuce2.html?info_id=" + code
 			Copy(copy_body);
 		});
 
