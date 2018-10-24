@@ -283,7 +283,7 @@
 			if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
 
 			} else {
-				window.location.href = "http://IPG.SALE/c/index.html"
+				window.location.href = "http://IPG.SALE/en/c/index.html"
 			}
 
 			//			document.getElementById('video').play()
@@ -579,25 +579,7 @@
 			window.location.href = "buy.html?phone=" + phone + "&weixin=" + weixin + "&email=" + email + "&nc=" + name + "&number=" + number + "&address=" + address
 		}
 	</script>
-	<script type="text/javascript" language="javascript">
-		var Browser_Agent = navigator.userAgent;
-		//浏览器为ie的情况
-		if(Browser_Agent.indexOf("MSIE") != -1) {
-			var a = navigator.browserLanguage;
 
-			//			console.log(a)
-			if(a != "zh-cn") {
-				location.href = "http://IPG.SALE/en/index.html";
-			}
-		}
-		//浏览器非ie的情况
-		else {
-			var b = navigator.language;
-			if(b != "zh-CN") {
-				location.href = "http://IPG.SALE/en/index.html";
-			}
-		}
-	</script>
 	<!--<script src="js/zhuce2.js?1"></script>-->
 
 </html>
